@@ -1,0 +1,150 @@
+%\documentclass[twoside,fleqn,12pt,a4paper,pagesize,chapterprefix,numbers=noenddot]{scrreprt} % from minh
+% \documentclass[twoside,12pt,a4paper,pagesize,chapterprefix,footexclude,BCOR=5mm]{scrbook}
+\documentclass[twoside,12pt,a4paper,pagesize,chapterprefix,footexclude,BCOR=5mm]{book}
+
+%% This is the recommended preamble for your document.
+
+% Load De Gruyter specific settings 
+\usepackage{styles/dgjournal}
+
+%% The mathptmx package is recommended for Times compatible math symbols.
+%% Use mtpro2 or mathtime instead of mathptmx if you have the commercially
+%% available MathTime fonts.
+%% Other options are txfonts (free) or belleek (free) or TM-Math (commercial)
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{subcaption} % instead of subfigure
+%% Use the graphics package to include figures
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{ulem} % zum durchstreichen \sout
+\usepackage{soul} % zum highlighten
+\usepackage{enumitem}
+\setlength\parindent{0pt}
+\usepackage[margin=15pt,font={footnotesize},labelfont=bf,format=plain]{caption} % for smaller figure legends
+\usepackage[absolute]{textpos} 
+%% Use natbib with these recommended options
+% \usepackage[authoryear,comma,longnamesfirst,sectionbib]{natbib} 
+\usepackage[authoryear,comma,sectionbib]{natbib} 
+\usepackage{setspace} % fuer 1.5 Zeilenabstand
+\onehalfspacing % fuer 1.5 Zeilenabstand
+\usepackage{multirow}
+\usepackage{import}
+\usepackage{todonotes}
+\usepackage{array}
+\usepackage{url}
+\usepackage[toc]{appendix}
+\usepackage{supertabular}
+\usepackage{pdfpages}
+\usepackage{listings}
+
+\usepackage{scrpage2} %von minh, definiert scrheadings
+\pagestyle{scrheadings} %page header
+\renewcommand{\headfont}{\normalfont\bfseries\small} %page header font
+\renewcommand{\pnumfont}{\normalfont\bfseries\small} %page number font
+\setheadwidth{text}
+\setfootwidth{text}
+\setheadsepline{.4pt} %header linie
+\clearscrheadfoot
+\ohead{\pagemark}
+\ihead{\headmark}
+\ifoot[\pagemark]{} %in [] fuer kapitelanfang
+%\ifoot[]{}
+\setlength{\headheight}{1.5\baselineskip}
+%\setlength{\skip\footins}{0} %veraendert nichts
+%\addtolength{\marginparwidth}{-1.5em} %von minh, soll rand veraendern, macht nix
+%\usepackage[BCOR=5mm]{typearea}
+
+\lstset
+{ %Formatting for code in appendix
+    basicstyle=\footnotesize,
+    numbers=left,
+    mathescape=true,
+    frame=tB,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=4,
+    breaklines=true,
+    breakatwhitespace=false,
+    keywords={for, to, do, then, input, output, return, datatype, function, in, if, else, foreach, while, begin, end, } %add the keywords you want, or load a language as Rubens explains in his comment above.
+}
+
+
+%% Start your document body here
+
+
+\newcommand{\tc}{T$>$C}%
+
+\begin{document}
+	
+\pagenumbering{roman}
+% deckblatt von pages als pdf exportieren, von dort via gimp als eps exportieren (aufloesungen erhoehen auf ca 200!, Seitenbreite 21)
+
+\begin{titlepage}
+\includepdf[pages={1-1}]{chapters/coverpage.pdf}
+\end{titlepage}
+ 
+\input{chapters/acknowledgments.tex}
+ 
+\input{chapters/abstract.tex}
+% \input{chapters/abstract_german.tex}
+
+
+\tableofcontents
+% \cleardoublepage
+
+\pagenumbering{arabic}
+
+\cleardoublepage
+
+%{\tableofcontents}	% table of contents
+%{\listoffigures}			% list of figure
+%\cleardoublepage
+%\pagenumbering{arabic}  
+
+
+%% Intro
+\input{chapters/introduction.tex}
+\input{chapters/contributions.tex}
+\input{chapters/slamdunk.tex}
+\input{chapters/splice_sim.tex}
+\input{chapters/summary.tex}
+
+% \cleardoublepage
+
+%\markboth{Curriculum Vitae}{Curriculum Vitae}
+%
+%\input{chapters/cv.tex}
+%\markboth{Curriculum Vitae}{Curriculum Vitae}
+
+\clearpage
+%\input{chapters/bibliography.tex}
+\addcontentsline{toc}{chapter}{Bibliography}
+\setlength{\bibsep}{0.7\baselineskip}
+\bibliography{references}
+\bibliographystyle{styles/DeGruyter}
+
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+
+\captionsetup[table]{list=no}
+\captionsetup[figures]{list=no}
+
+\let\svaddcontentsline\addcontentsline
+\renewcommand\addcontentsline[3]{%
+  \ifthenelse{\equal{#1}{lof}}{}%
+  {\ifthenelse{\equal{#1}{lot}}{}{\svaddcontentsline{#1}{#2}{#3}}}}
+  
+\begin{appendices}
+	\input{chapters/appendix.tex}
+\end{appendices}
+
+\end{document}

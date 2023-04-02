@@ -1,0 +1,19 @@
+\chapter{Main contributions of this thesis}
+
+Recent transcriptome profiling methods employ nucleotide conversions as an added layer to open new avenues for the study of transcriptional processes. As with all RNA-seq methods, accurate read mapping forms the basis of this new class of technology in the transcriptomics toolkit as only then one can reasonably call nucleotide conversions in the first place. We found that currently there are no dedicated tools available to address the challenges produced by these methods and whether the transfer of existing mapping approaches in this domain produces reliable results and to what degree these are biased remains to be investigated.
+The goal of this thesis consists of two complementary aspects: \textbf{(1)} develop new computational approaches that map nucleotide conversion containing reads efficiently and accurately and provide appropriate readouts to facilitate the interpretation of these new profiling methods and \textbf{(2)} evaluate the applicability of existing methods in the context of epitranscriptomics sequencing and assess their biases with regards to their subsequent readout and interpretation. \\
+In chapter \ref{chap:slamdunk} we introduce a method to map and quantify nucleotide conversion containing read sets and showcase it by implementing it for the novel SLAM-seq technology via the package SLAM-DUNK. Our main contributions are:
+\begin{description}
+    \item [Conversion-aware scoring scheme] Our modified scoring function to calculate read alignment scores is adapted to score the expected introduced nucleotide conversion neutrally, therefore exhibiting constant mapping rates throughout the spectrum of increasing conversion rates.
+    \item[Multi-mapper recovery] We recover multi-mappers by retaining multi-mapping reads on a genomic level as long as they can unambiguously assigned to a unique annotated 3' end.
+    \item[Robust quantification of nucleotide conversions] Nucleotide conversion quantifications are calculated without introducing a coverage or base composition bias.
+\end{description}
+
+Furthermore, we found that no simulation framework to date covers the introduction of modified bases the new profiling methods employ to study transcriptional processes such as expression dynamics or splicing kinetics. Appropriate simulation of partially spliced transcripts and the introduction of nucleotide conversions at given rates however is the prerequisite to assess the validity and introduced biases when adopting existing tools to process epitranscriptomics datasets. To address this question, in chapter \ref{chap:splice_sim}, we introduce a new RNA-seq read simulation framework that specifically allows for simulation of all these necessary characteristics and evaluate the impact of applying popular and specialized mapping tools on the biological readouts of several profiling methods:
+
+\begin{description}
+    \item[Spliced read simulation] Our simulator allows for the simulation of reads from arbitrary mixes of (partially) spliced isoforms per transcript.
+    \item[Nucleotide conversions in reads] Any type of nucleotide-conversion can be introduced at given rates and mixed sets of converted an unconverted reads are simulated.
+    \item[Detailled benchmarking metrics] We provide fine-grained mapping accuracies per entity of direct biological interpretation i.e. transcripts, exons/introns and splice-junctions as well as additional metrics such as the fraction of labelled reads per transcript or the fraction of spliced reads per splice-junction.
+    \item[Nucleotide conversion mappability compendium] We provide comprehensive \\ transcriptome-wide mapping accuracies for the mouse and human genome and propose accompanying data cleaning strategies to mitigate biases of current mapping tools when processing epitranscriptomics datasets.
+\end{description}

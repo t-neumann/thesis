@@ -1,0 +1,57 @@
+%!TEX root = ../tobias_neumann_phd_thesis.tex
+
+~\vfill
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+The application of high-throughput sequencing methods to study RNA has revolutionized our understanding of the transcriptome and opened up multiple avenues to study its processes. A recent flavor are epitranscriptome sequencing technologies that detect naturally occurring or artificially introduced nucleotide modifications which can be employed as a means to study dynamic cellular processes such as gene expression dynamics or splicing kinetics. These nucleotide conversions are typically read out as mismatches during sequencing when mapped to a reference sequence and pose challenges to established reference-based read mapping approaches that are typically designed to only tolerate mismatches in the range of genetic variation and sequencing error. \\
+In this thesis, we address this lack of appropriate methods by proposing a novel strategy to robustly and accurately map and quantify nucleotide conversion containing read sets. We apply our method to a novel epitranscriptomics sequencing technology and demonstrate our method provides constant mapping rates even at high conversion rates and is able to robustly quantify nucleotide conversions in an unbiased manner. \\
+In a complementary effort, we provide a specialized RNA-seq simulation framework that models the introduction of nucleotide conversions in arbitrary mixes of (partially) spliced transcript variants, thereby enabling a comprehensive evaluation of biological entities and processes that are studied with epitranscriptome sequencing technologies. Using large-scale simulated datasets, we provide an extensive benchmark of mapping accuracies of current popular read mapping tools, quantify introduced biases and propose strategies to mitigate their impact on the final biological interpretation of the respective readouts.
+
+\clearpage
+
+This cumulative thesis consists of the following manuscripts / articles:
+
+\begin{enumerate}[label=\roman*)]
+\item \underline{Neumann T}, Herzog AV, Muhar M, von Haeseler A, Zuber J, Ameres, SL \& Rescheneder P. (2019). Quantification of experimentally induced nucleotide conversions in high-throughput sequencing datasets, \textit{BMC Bioinformatics}, 2019. 20, 258.
+\item Popitsch N*, \underline{Neumann T}*, von Haeseler A \& Ameres SL. \textit{Splice\_sim}: a nucleotide-conversion enabled RNA-seq simulation and evaluation framework. Submitted to \textit{Genome Biology} March 2023.
+\end{enumerate}
+
+Other articles published during the course of this thesis:
+\begin{enumerate}[label=\roman*)]
+\item Malzl D*, Peycheva M*, Rahjouei A, Gnan S, Klein K, Nazarova M, Schoeberl UE, Gilbert DM, Buonomo S, Di Virgilio M, \underline{Neumann T$^{\dagger}$} \& Pavri R$^{\dagger}$: RIF1 regulates replication origin activity and early replication timing in B cells. \textit{bioRxiv}, 2023.
+\item Leiendecker L, \underline{Neumann T}, Jung PS, Cronin SM, Steinacker  TL, Schleiffer A, Schutzbier M, Mechtler K, Kervarrec T, Laurent E, Bachiri K, Coyaud E, Murali R, Busam KJ, Itzinger-Monshi B, Kirnbauer R, Cerroni L, Calonje E, Rutten A, Stubenrauch F, Griewank KG, Wiesner T$^{\dagger}$ \& Obenauf AC$^{\dagger}$: Human papillomavirus 42 drives digital papillary adenocarcinoma and elicits a germ-cell like program conserved in HPV-positive cancers. \textit{Cancer Discovery}, 2023.
+\item Peycheva M, \underline{Neumann T}, Malzl D, Nazarova M, Schoeberl UE \& Pavri R: DNA replication timing directly regulates the frequency of oncogenic chromosomal translocations. \textit{Science}, 2022. 377(6612), 1277.
+\item Kellner MJ$^{*}$$^{\dagger}$, Ross JJ$^{*}$, Schnabl J$^{*}$, Dekens MPS, Matl M, Heinen R, Grishkovskaya I, Bauer B, Stadlmann J, Menéndez-Arias L, Straw AD, Fritsche-Polanz R, Traugott M, Seitz T, Zoufaly A, F{\"o}dinger M, Wenisch C, Zuber J, \underline{VCDI}, Pauli A$^{\dagger}$, \& Brennecke J$^{\dagger}$: A Rapid, Highly Sensitive and Open-Access SARS-CoV-2 Detection Assay for Laboratory and Home Testing. \textit{Frontiers in Molecular Biosciences}, 2022. 9
+\item de Almeida M$^{*}$, Hinterndorfer M$^{*}$, Brunner H, Grishkovskaya I, Singh K, Schleiffer A, Jude J, Deswal S, Kalis R, Vunjak M, Lendl T, Imre R, Roitinger E, \underline{Neumann T}, Kandolf S, Schutzbier M, Mechtler K, Versteeg G, Haselbach D$^{\dagger}$ \& Zuber J$^{\dagger}$: AKIRIN2 controls the nuclear import of proteasomes in vertebrates. \textit{Nature}, 2021. 599, 491–496.
+\item Yelagandula R, Bykov A, Vogt A, Heinen R, {\"O}zkan E, Strobl MM, Baar JC, Uzunova K, Hajdusits B, Kordic D, Suljic E, Kurtovic-Kozaric A, Izetbegovic S, Schaeffer J, Hufnagl P, Zoufaly A, Seitz T, \underline{VCDI}, F{\"o}dinger M, Allerberger F, Stark A, Cochella L$^{\dagger}$ \& Elling U$^{\dagger}$: Multiplexed detection of SARS-CoV-2 and other respiratory infections in high throughput by SARSeq. \textit{Nature Communications}, 2021. 12, 3132.
+\item Haas L, Elewaut A, Gerard CL, Umkehrer C, Leiendecker L, Pedersen M, Krecioch I, Hoffmann D, Novatchkova M, Kuttke M, \underline{Neumann T}, de Silva IP, Witthock H, Cuendet MA, Carotta S, Harrington KJ, Zuber J, Scolyer RA, Long GV, Wilmott JS, Michielin O, Vanharanta S, Wiesner T \& Obenauf AC: Acquired resistance to anti-MAPK targeted therapy confers an immune-evasive tumor microenvironment and cross-resistance to immunotherapy in melanoma. \textit{Nature Cancer}, 2021. 2, 693–708.
+\item Umkehrer C, Holstein F, Formenti L, Jude J, Froussios K,  \underline{Neumann T}, Cronin SM, Haas L, Lipp JJ, Burkard TR, Fellner M, Wiesner T, Zuber J \& Obenauf AC: Isolating live cell clones from barcoded populations using CRISPRa-inducible reporters. \textit{Nature Biotechnology}, 2020. 39, 174–178.
+\item Michlits G$^{*}$, Jude J$^{*}$, Hinterndorfer M, de Almeida M, Vainorius G, Hubmann M, \underline{Neumann T}, Schleiffer A, Burkard T, Fellner M, Gijsbertsen M, Traunbauer A, Zuber J$^{\dagger}$ \& Elling U$^{\dagger}$: Multilayered VBC-score predicts sgRNAs that efficiently generate loss-of-function alleles. \textit{Nature Methods}, 2020. 17, 708–716.
+\end{enumerate}
+* equal contributions \\
+$\dagger$ co-corresponding authors
+
+\chapter*{Zusammenfassung}
+\addcontentsline{toc}{chapter}{Zusammenfassung}
+
+Die Anwendung von Hochdurchsatz-Sequenzierungsmethoden zur Untersuchung der RNA hat unser Verst{\"a}ndnis des Transkriptoms revolutioniert und zahlreiche M{\"o}glichkeiten zur Untersuchung seiner Prozesse er{\"o}ffnet. Ein neuer Trend sind Epitranskriptom-Sequenzierungstechnologien, die nat{\"u}rlich vorkommende oder k{\"u}n-stlich eingef{\"u}hrte Nukleotidmodifikationen aufsp{\"u}ren, die als Mittel zur Untersuchung dynamischer zellul{\"a}rer Prozesse wie der Dynamik der Genexpression oder der Splei{\ss}kinetik eingesetzt werden k{\"o}nnen.  Diese Nukleotidmodifikationen werden bei der Sequenzierung in der Regel als Fehlpaarungen ausgelesen, wenn sie auf eine Referenzsequenz abgebildet werden, und stellen eine Herausforderung f{\"u}r etablierte referenzbasierte Read-Mapping-Ans{\"a}tze dar, die in der Regel so konzipiert sind, dass sie nur Fehlpaarungen im Bereich der genetischen Variation und Sequenzierungsfehler tolerieren. \\
+In dieser Arbeit adressieren wir diesen Mangel an geeigneten Methoden, indem wir eine neuartige Strategie zur robusten und genauen Abbildung und Quantifizierung von Nukleotidmodifikationen enthaltenden Sequenzierreads vorschlagen. Wir wenden unsere Methode auf eine neuartige Epitranskriptomik-Sequenzierungstechnolo-gie an und zeigen, dass unsere Methode auch bei hohen Umwandlungsraten konstante Mapping-Raten liefert und in der Lage ist, Nukleotidkonversionen auf robuste und unverzerrte Weise zu quantifizieren. \\
+Erg{\"a}nzend dazu stellen wir ein spezielles RNA-seq-Simulationsframework zur Ver-f{\"u}gung, das die Einf{\"u}hrung von Nukleotidkonversionen in beliebigen Mischungen von (teilweise) gesplei{\ss}ten Transkriptvarianten modelliert und damit eine umfassende Bewertung der biologischen Einheiten und Prozesse erm{\"o}glicht, die mit Epitranskriptom-Sequenzierungstechnologien untersucht werden k{\"o}nnen. Anhand gro{\ss}angelegter simulierter Datens{\"a}tze erstellen wir einen umfassenden Benchmark der Mapping-Genauigkeit aktueller popul{\"a}rer Read-Mapping-Tools, quantifizieren eingef{\"u}hrte Verzerrungen und schlagen Strategien zur Abschw{\"a}chung ihrer Aus-wirkungen auf die endg{\"u}ltige biologische Interpretation der jeweiligen Readouts vor.
+
+\vspace*{4\baselineskip}
+
+Diese kumulative Thesis beinhaltet folgende Publikationen / Manuskripte:
+
+\begin{enumerate}[label=\roman*)]
+\item \underline{Neumann T}, Herzog AV, Muhar M, von Haeseler A, Zuber J, Ameres, SL \& Rescheneder P. (2019). Quantification of experimentally induced nucleotide conversions in high-throughput sequencing datasets, \textit{BMC Bioinformatics}, 2019. 20, 258.
+\item Popitsch N*, \underline{Neumann T}*, von Haeseler A \& Ameres SL. \textit{Splice\_sim}: a nucleotide-conversion enabled RNA-seq simulation and evaluation framework. Submitted to \textit{Genome Biology} March 2023.
+\end{enumerate}
+* equal contributions
+\\\\
+
+
+\vfill
+
+
+
+
